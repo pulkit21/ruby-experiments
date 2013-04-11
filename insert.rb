@@ -10,5 +10,5 @@ def insert(a)
 	end
 puts a
 end
-n =[2,4,3,1] 
+n =[6,3,4,1,5,2] 
 puts insert(n)
