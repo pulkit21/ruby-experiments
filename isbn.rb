@@ -7,7 +7,7 @@ def isbn(n)
 			c = c.to_i + 3*( n[i]).to_i
 		else
 			#puts n[i]
-			c = c.to_i + (n[i]).to_i
+			c = c.to_i + 1*(n[i]).to_i
 		end
 	end
 	#for i in 0..n.length
@@ -18,11 +18,15 @@ def isbn(n)
 
 	#s=0
 	s=c
-	a=10 - s%10
+	d=s%10
+	a=10 - d
+	if a == 10
+		n.join.to_s  + "-" + d.to_s
+	else
 	 n.join.to_s  + "-" +  a.to_s 	 		
 	#n.to_s.zip(a.to_s).flatten.compact
-
 end
-b=978014300723.to_s.split('')
+end
+b=978014300763.to_s.split('')
 #b=978014300723.to_s.split('')
 puts isbn(b)
